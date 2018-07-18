@@ -1,0 +1,65 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    [ngClass]="{hidden: !(isHandset$ | async)}"
+    fixedInViewport="true"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <div *ngIf="(isLogged | async); else notLoggedSideBar">
+          <a mat-list-item routerLink="/account">
+            <mat-icon mat-list-icon>account_circle</mat-icon>
+            <span>My Account</span>
+          </a>
+          <a mat-list-item routerLink="/basket">
+            <mat-icon mat-list-icon>shopping_cart</mat-icon>
+            <span>Shopping cart</span>
+          </a>
+          <a mat-list-item href="#">Logout</a>
+      </div>
+      <ng-template #notLoggedSideBar>
+          <a mat-list-item routerLink="/basket">
+            <mat-icon mat-list-icon>shopping_cart</mat-icon>
+            <span>Shopping cart</span>
+          </a>
+          <a mat-list-item routerLink="/signin">Sign In</a>
+          <a mat-list-item routerLink="/signup">Sign Up</a>
+      </ng-template>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <a routerLink="/"><span>SHOPPER</span></a>
+      <span class="spacer"></span>
+      <div [ngClass]="{hidden: (isHandset$ | async)}">
+          <div *ngIf="(isLogged | async); else notLoggedBlock">
+            <a routerLink="/basket"><button mat-icon-button><mat-icon aria-label="Show shopping cart">shopping_cart</mat-icon></button></a>
+            <a routerLink="/account">
+              <button mat-button><mat-icon aria-label="Show my account">account_circle</mat-icon>
+                <span class="currentUser">{{ email }}</span>
+              </button>
+            </a>
+            <a (click)="logout()"><button mat-button>Logout</button></a>
+          </div>
+          <ng-template #notLoggedBlock>
+            <a routerLink="/basket"><button mat-icon-button><mat-icon aria-label="Show shopping cart">shopping_cart</mat-icon></button></a>
+            <a routerLink="/signin"><button mat-button>Sign In</button></a>
+            <a routerLink="/signup"><button mat-button>Sign Up</button></a>
+          </ng-template>
+      </div>
+      
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

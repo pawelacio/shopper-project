@@ -1,0 +1,36 @@
+
+<mat-card class="product-detail-card">
+  <h1>My Shopping</h1>
+  <br/>
+  
+  <table *ngIf="products.length > 0; else elseBlock" class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nazwa</th>
+        <th scope="col">Cena</th>
+        <th scope="col">Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products; let i = index">
+        <th scope="col">{{ i }}</th>
+        <th scope="col">{{ product.name }}</th>
+        <th scope="col">{{ product.price }}</th>
+        <th scope="col">
+          <button mat-icon-button (click)="removeProduct(i)">
+            <mat-icon aria-label="Remove item from Cart">close</mat-icon>
+          </button>
+        </th>
+      </tr>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col" style="text-align: right">Total:</th>
+        <th scope="col">{{ totalCost }}</th>
+      </tr>
+    </tbody>
+  </table>
+  <ng-template #elseBlock>
+    <h6>Cart is empty</h6>
+  </ng-template>
+</mat-card>

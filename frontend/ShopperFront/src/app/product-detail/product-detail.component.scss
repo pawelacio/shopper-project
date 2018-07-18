@@ -1,0 +1,21 @@
+.product-detail-card {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .product-detail-card-title {
+        font-size: 30px;
+    }
+    .product-information {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+    .product-price, .product-availability {
+        font-size: 20px;
+    }
+    .bold {
+        font-weight: bold;
+    }
+    .image {
+        text-align: center;
+        margin: 0px;
+    }
+}

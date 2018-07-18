@@ -1,0 +1,31 @@
+.singleCard {
+    padding: 10px;
+    
+}
+
+mat-card {
+    z-index: 1;
+    transition: all .2s ease-in-out;
+    height: 420px;
+    &:hover {
+        z-index: 2;
+        cursor: pointer;
+        box-shadow: 0 0 15px 3px #6c757d;
+        -ms-transform: scale(1.06, 1.06); /* IE 9 */
+        -webkit-transform: scale(1.06, 1.06); /* Safari */
+        transform: scale(1.06, 1.06);
+    }
+    img {
+        height: 300px;
+        width: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .product-name {
+        font-size: 15px;
+    }
+    .product-price {
+        font-size: 16px;
+    }
+}

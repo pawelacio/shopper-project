@@ -1,0 +1,8 @@
+@import '../scss/vars';
+
+.container {
+    padding: 15px;
+    min-height: -webkit-calc(100% - #{$footer-height} - #{$header-height} - #{$header-margin-top});
+    min-height:    -moz-calc(100% - #{$footer-height} - #{$header-height} - #{$header-margin-top});
+    min-height:         calc(100% - #{$footer-height} - #{$header-height} - #{$header-margin-top});
+}
