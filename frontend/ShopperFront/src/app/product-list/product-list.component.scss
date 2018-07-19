@@ -1,12 +1,11 @@
 .singleCard {
     padding: 10px;
-    
+    display: flex;
 }
 
 mat-card {
     z-index: 1;
     transition: all .2s ease-in-out;
-    height: 420px;
     &:hover {
         z-index: 2;
         cursor: pointer;
@@ -23,7 +22,7 @@ mat-card {
         margin-right: auto;
     }
     .product-name {
-        font-size: 15px;
+        font-size: 16px;
     }
     .product-price {
         font-size: 16px;
