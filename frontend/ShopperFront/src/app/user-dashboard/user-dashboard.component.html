@@ -1,0 +1,14 @@
+<mat-card>
+    <div class="row">
+      <div class="col-md-3 col-sm-12">
+        <ul class="user-side-menu">
+          <a routerLink="details"><li class="button"><div class="selector">&nbsp;</div><span class="btn-text">Details</span></li></a>
+          <a routerLink="orders"><li class="button"><div class="selector">&nbsp;</div><span class="btn-text">My Orders</span></li></a>
+          <a routerLink="addresses"><li class="button"><div class="selector">&nbsp;</div><span class="btn-text">My Addresses</span></li></a>
+        </ul>
+      </div>
+      <div class="col-md-9 col-sm-12">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+</mat-card>

@@ -1,0 +1,14 @@
+.form {
+    min-width: 250px;
+    max-width: 600px;
+    margin-top: 50px;
+    margin-left: 0px;
+    margin-right: auto;
+    .full-width {
+        width: 100%;
+    }
+    .submitButton {
+        float: right;
+        margin-top: 20px;
+    }
+}

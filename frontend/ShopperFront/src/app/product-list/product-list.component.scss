@@ -6,6 +6,8 @@
 mat-card {
     z-index: 1;
     transition: all .2s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
     &:hover {
         z-index: 2;
         cursor: pointer;

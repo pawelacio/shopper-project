@@ -1,0 +1,33 @@
+.user-side-menu {
+    list-style: none;
+    a {
+        text-decoration: none;
+        height: 100%;
+        color: black;
+    }
+    .button {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 5px;
+        margin-bottom: 5px;
+        .selector {
+            min-width: 4px;
+            background-color: #3f51b5;
+            display: none;
+            margin-right: 4px; 
+        }
+        .btn-text {
+            margin-left: 8px;
+        }
+    }
+    .button:hover {
+        .selector {
+            display: inline-block;
+        }
+        .btn-text {
+            margin-left: 0px;
+        }
+    }
+    
+}

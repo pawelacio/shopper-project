@@ -23,6 +23,10 @@ import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { UserDetailsComponent } from './user-dashboard/user-details/user-details.component';
+import { UserOrdersComponent } from './user-dashboard/user-orders/user-orders.component';
+import { UserAddressesComponent } from './user-dashboard/user-addresses/user-addresses.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     ProductDetailComponent,
     BasketComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    UserDashboardComponent,
+    UserDetailsComponent,
+    UserOrdersComponent,
+    UserAddressesComponent
   ],
   imports: [
     BrowserModule,
